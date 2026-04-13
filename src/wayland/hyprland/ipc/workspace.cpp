@@ -151,7 +151,7 @@ void HyprlandWorkspace::clearUrgent() {
 }
 
 void HyprlandWorkspace::activate() {
-	this->ipc->dispatch(QString("workspace %1").arg(this->bName.value()));
+	this->ipc->dispatch(QString("hl.workspace(%1)").arg(this->bName.value()));
 }
 
 } // namespace qs::hyprland::ipc
